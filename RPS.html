@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<button>
+  Random
+</button>
+<script>
+  function computerPlay(){
+    let items = ['rock', 'scissors', 'paper'];
+    return items[Math.floor(Math.random() * items.length)];
+  }
+  const playerSelection = '';
+  const computerSelection = computerPlay();
+
+  function playRound(playerSelection, computerSelection) {
+    let log = '';
+
+// first condition
+
+    if (playerSelection === 'rock') {
+      if (computerSelection === 'rock')
+        alert('Dead Heat!'+' Try another round')
+    }
+      else if (computerSelection === 'paper') {
+         alert ('You lose this round, but still ahead')
+     }
+      else {
+        alert ('You win! Congratulations!')
+    }
+
+    // second condition
+
+    if (playerSelection === 'paper') {
+      if (computerSelection === 'rock')
+         alert ('You win! Congratulations!')
+    }
+    else if (computerSelection === 'paper') {
+      alert('Dead Heat!'+' Try another round')
+    }
+    else {
+      alert ('You lose this round, but still ahead')
+    }
+
+    // third condition
+
+    if (playerSelection === 'scissors') {
+      if (computerSelection === 'rock')
+      alert ('You lose this round, but still ahead')
+    }
+    else if (computerSelection === 'paper') {
+      alert ('You win! Congratulations!')
+    }
+    else {
+      alert('Dead Heat!'+' Try another round')
+    }
+    return log;
+  }
+
+
+</script>
+</body>
+</html>
